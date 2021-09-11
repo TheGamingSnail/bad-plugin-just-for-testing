@@ -60,14 +60,7 @@ class Main extends PluginBase implements Listener {
             }
         });
         $form->setTitle("LunarBlock Rules");
-        $form->setContent("#1 Do not say anything controversial or offensive\n
-        #2 Be kind\n
-        #3 Do not say anything NSFW\n
-        #4 Swearing is allowed but do not swear at someone in a mean way\n
-        #5 If you wish to report someone, please make a support ticket in #support in our discord server, do not report people in chat, our moderators may not check chat\n
-        #6 Do not send any viruses, shady links, or anything of that sort (instant ban)\n
-        #7 Do not advertise, advertising will result in a mute or a kick\n
-        #8 Do not raid other people's islands, doing so will result in a non-appealable 30-day ban");
+        $form->setContent("#1 Do not say anything controversial or offensive\n#2 Be kind\n#3 Do not say anything NSFW\n#4 Swearing is allowed but do not swear at someone in a mean way\n #5 If you wish to report someone, please make a support ticket in #support in our discord server, do not report people in chat, our moderators may not check chat\n#6 Do not send any viruses, shady links, or anything of that sort (instant ban)\n#7 Do not advertise, advertising will result in a mute or a kick\n#8 Do not raid other people's islands, doing so will result in a non-appealable 30-day ban");
         $form->sendToPlayer($player);
         return $form;
     }
