@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/TheGamingSnail/bad-plugin-just-for-testing
+build-by-default: true
+branches:
+- main
+projects:
+  bad-plugin-just-for-testing:
+    path: ""
+...
