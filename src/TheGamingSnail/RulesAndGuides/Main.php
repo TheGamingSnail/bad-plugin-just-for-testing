@@ -9,7 +9,7 @@ use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\event\Listener;
 
-class main extends PluginBase implements Listener {
+class Main extends PluginBase implements Listener {
 
     public function onEnable(){
 
@@ -17,7 +17,7 @@ class main extends PluginBase implements Listener {
 
     public function onCommand(CommandSender $sender, Command $cmd, String $Label, Array $args) : bool {
 
-        switch($command->getName()){
+        switch($cmd->getName()){
             case "guide":
             if($sender instanceof Player){
                 $this->opendaguideboi($sender);
