@@ -58,7 +58,6 @@ class main extends PluginBase implements Listener {
             if($result === null){
             return true;
             }
-            }
         });
         $form->setTitle("LunarBlock Rules");
         $form->setContent("#1 Do not say anything controversial or offensive\n
