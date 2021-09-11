@@ -1,6 +1,6 @@
 name: RulesAndGuides
-main: TheGamingSnail/RulesAndGuides/Main
-author: GamingSnail7410
+main: TheGamingSnail\RulesAndGuides\Main
+author: TheGamingSnail
 api: 3.0.0
 version: 0.1
 
