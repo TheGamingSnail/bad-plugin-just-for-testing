@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
 
     public function onCommand(CommandSender $sender, Command $cmd, String $Label, Array $args) : bool {
 
-        switch($command->getName()){
+        switch($cmd->getName()){
             case "guide":
             if($sender instanceof Player){
                 $this->opendaguideboi($sender);
