@@ -9,7 +9,7 @@ use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\event\Listener;
 
-class Main extends PluginBase implements Listener {
+class main extends PluginBase implements Listener {
 
     public function onEnable(){
 
@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
 
     public function onCommand(CommandSender $sender, Command $cmd, String $Label, Array $args) : bool {
 
-        switch($cmd->getName()){
+        switch($command->getName()){
             case "guide":
             if($sender instanceof Player){
                 $this->opendaguideboi($sender);
@@ -35,11 +35,11 @@ class Main extends PluginBase implements Listener {
             }
             switch($result){
                 case 0:
-                $this->showmedarules($player);
+                    $this->showmedarules($player);
                 break;
 
                 case 1:
-                $this->showmedaguides($player);
+                    $this->showmedaguides($player);
                 break;
             }
         });
@@ -47,6 +47,28 @@ class Main extends PluginBase implements Listener {
         $form->setContent("Pick One");
         $form->addButton("Rules");
         $form->addButton("Guides");
+        $form->sendToPlayer($player);
+        return $form;
+    }
+    
+    public function showmedarules($player){
+        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+        $form = $api->createSimpleForm(function (Player $player, int $data = null){
+            $result = $data;
+            if($result === null){
+            return true;
+            }
+            }
+        });
+        $form->setTitle("LunarBlock Rules");
+        $form->setContent("#1 Do not say anything controversial or offensive\n
+        #2 Be kind\n
+        #3 Do not say anything NSFW\n
+        #4 Swearing is allowed but do not swear at someone in a mean way\n
+        #5 If you wish to report someone, please make a support ticket in #support in our discord server, do not report people in chat, our moderators may not check chat\n
+        #6 Do not send any viruses, shady links, or anything of that sort (instant ban)\n
+        #7 Do not advertise, advertising will result in a mute or a kick\n
+        #8 Do not raid other people's islands, doing so will result in a non-appealable 30-day ban");
         $form->sendToPlayer($player);
         return $form;
     }
