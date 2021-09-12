@@ -8,6 +8,8 @@ use pocketmine\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\event\Listener;
+use TheGamingSnail\RulesAndGuides\libs\jojoe77777\FormAPI\SimpleForm;
+use TheGamingSnail\RulesAndGuides\libs\jojoe77777\FormAPI\CustomForm;
 
 class Main extends PluginBase implements Listener {
 
